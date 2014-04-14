@@ -59,7 +59,7 @@ module Ellen
       end
 
       def image_type
-        "ainmated" if options[:animated]
+        "animated" if options[:animated]
       end
 
       def connection

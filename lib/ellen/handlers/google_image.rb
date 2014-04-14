@@ -8,7 +8,7 @@ module Ellen
       end
 
       on /animate (.+)/, description: "Search animation from Google" do |message|
-        if url = Ellen::GoogleImage::Client.new(query: message[1]).get
+        if url = Ellen::GoogleImage::Client.new(query: message[1], animated: true).get
           say url
         end
       end
