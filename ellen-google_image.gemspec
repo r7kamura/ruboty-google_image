@@ -16,6 +16,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "ellen", ">= 0.0.5"
+  spec.add_dependency "faraday"
+  spec.add_dependency "faraday_middleware"
   spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency "pry"
   spec.add_development_dependency "rake"
 end
