@@ -1,16 +1,14 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ellen/google_image/version'
+require "ellen/google_image/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "ellen-google_image"
   spec.version       = Ellen::GoogleImage::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "An ellen handler to search images from Google."
+  spec.homepage      = "https://github.com/r7kamura/ellen-google_image"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
