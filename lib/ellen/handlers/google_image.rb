@@ -1,18 +1,18 @@
 module Ellen
   module Handlers
     class GoogleImage < Base
-      on /image (.+)/, name: "image", description: "Search image from Google"
+      on /image( me)? (.+)/, name: "image", description: "Search image from Google"
 
-      on /animate (.+)/, name: "animate", description: "Search animation from Google"
+      on /animate( me)? (.+)/, name: "animate", description: "Search animation from Google"
 
       def image(message)
-        if url = search(message[1])
+        if url = search(message[2])
           robot.say url
         end
       end
 
       def animate(message)
-        if url = search(message[1], animated: true)
+        if url = search(message[2], animated: true)
           robot.say url
         end
       end
