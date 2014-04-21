@@ -1,3 +1,6 @@
+## 0.0.4
+* Add optional `me`: e.g. `image me ellen`
+
 ## 0.0.3
 * Adapt to ellen 0.0.8's new handler interface
 
