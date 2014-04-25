@@ -1,18 +1,18 @@
 module Ellen
   module Handlers
     class GoogleImage < Base
-      on /image( me)? (.+)/, name: "image", description: "Search image from Google"
+      on /image( me)? (?<keyword>.+)/, name: "image", description: "Search image from Google"
 
       def image(message)
-        if url = search(message[2])
-          robot.say url
+        if url = search(message[:keyword])
+          robot.say(url)
         end
       end
 
       private
 
       def search(query)
-        Ellen::GoogleImage::Client.new(options.merge(query: query)).get
+        Ellen::GoogleImage::Client.new(query: query).get
       end
     end
   end
