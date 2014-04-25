@@ -1,3 +1,6 @@
+## 0.0.5
+* Obsolete animate command
+
 ## 0.0.4
 * Add optional `me`: e.g. `image me ellen`
 
