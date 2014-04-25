@@ -46,7 +46,6 @@ module Ellen
       def given_params
         {
           q: options[:query],
-          imgType: image_type,
         }
       end
 
@@ -56,10 +55,6 @@ module Ellen
           safe: "active",
           v: "1.0",
         }
-      end
-
-      def image_type
-        "animated" if options[:animated]
       end
 
       def connection
