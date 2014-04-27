@@ -1,3 +1,6 @@
+## 0.0.6
+* Support Ellen v0.2.0
+
 ## 0.0.5
 * Obsolete animate command
 
