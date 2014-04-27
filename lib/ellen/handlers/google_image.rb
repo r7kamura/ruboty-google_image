@@ -5,7 +5,7 @@ module Ellen
 
       def image(message)
         if url = search(message[:keyword])
-          robot.say(url)
+          message.reply(url)
         end
       end
 
