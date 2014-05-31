@@ -1,7 +1,7 @@
 require "faraday"
 require "faraday_middleware"
 
-module Ellen
+module Ruboty
   module GoogleImage
     class Client
       GOOGLE_IMAGE_API_URL = "http://ajax.googleapis.com/ajax/services/search/images"
@@ -15,7 +15,7 @@ module Ellen
       def get
         resource["unescapedUrl"] if resource
       rescue => exception
-        Ellen.logger.error("Error: #{self}##{__method__} - #{exception}")
+        Ruboty.logger.error("Error: #{self}##{__method__} - #{exception}")
         nil
       end
 

@@ -1,9 +1,9 @@
-# Ellen::GoogleImage
-An ellen handler to search images from Google.
+# Ruboty::GoogleImage
+An ruboty handler to search images from Google.
 
 ## Usage
 ```
-@ellen image <keyword> - Search image from Google
+@ruboty image <keyword> - Search image from Google
 ```
 
-![](https://raw.githubusercontent.com/r7kamura/ellen-google_image/master/images/screenshot.png)
+![](https://raw.githubusercontent.com/r7kamura/ruboty-google_image/master/images/screenshot.png)

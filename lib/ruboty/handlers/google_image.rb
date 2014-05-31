@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Handlers
     class GoogleImage < Base
       on /image( me)? (?<keyword>.+)/, name: "image", description: "Search image from Google"
@@ -12,7 +12,7 @@ module Ellen
       private
 
       def search(query)
-        Ellen::GoogleImage::Client.new(query: query).get
+        Ruboty::GoogleImage::Client.new(query: query).get
       end
     end
   end

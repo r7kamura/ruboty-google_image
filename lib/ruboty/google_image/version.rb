@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module GoogleImage
     VERSION = "0.0.6"
   end
