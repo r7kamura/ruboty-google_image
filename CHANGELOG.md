@@ -1,3 +1,6 @@
+## 0.0.7
+* Rename: Ellen -> Ruboty
+
 ## 0.0.6
 * Support Ruboty v0.2.0
 
