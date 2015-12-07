@@ -1,3 +1,6 @@
+## 0.1.0
+* Use Google Custom Search API instead of Google Image Search API
+
 ## 0.0.7
 * Rename: Ellen -> Ruboty
 
