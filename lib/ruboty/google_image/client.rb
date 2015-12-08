@@ -4,7 +4,7 @@ require "faraday_middleware"
 module Ruboty
   module GoogleImage
     class Client
-      GOOGLE_IMAGE_API_URL = "http://ajax.googleapis.com/ajax/services/search/images"
+      GOOGLE_IMAGE_API_URL = "https://www.googleapis.com/customsearch/v1"
 
       attr_reader :options
 
@@ -13,7 +13,7 @@ module Ruboty
       end
 
       def get
-        resource["unescapedUrl"] if resource
+        resource["link"] if resource
       rescue => exception
         Ruboty.logger.error("Error: #{self}##{__method__} - #{exception}")
         nil
@@ -23,10 +23,8 @@ module Ruboty
 
       def resource
         @resource ||= begin
-          if data = response.body["responseData"]
-            if results = data["results"]
-              results.sample
-            end
+          if items = response.body["items"]
+            items.sample
           end
         end
       end
@@ -51,9 +49,11 @@ module Ruboty
 
       def default_params
         {
-          rsz: 8,
-          safe: "active",
-          v: "1.0",
+          searchType: 'image',
+          safe: 'high',
+          fields: 'items(link)',
+          cx: ENV['GOOGLE_CSE_ID'],
+          key: ENV['GOOGLE_CSE_KEY']
         }
       end
 
