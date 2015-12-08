@@ -13,7 +13,7 @@ module Ruboty
       end
 
       def get
-        resource["unescapedUrl"] if resource
+        resource["link"] if resource
       rescue => exception
         Ruboty.logger.error("Error: #{self}##{__method__} - #{exception}")
         nil
@@ -23,10 +23,8 @@ module Ruboty
 
       def resource
         @resource ||= begin
-          if data = response.body["responseData"]
-            if results = data["results"]
-              results.sample
-            end
+          if items = response.body["items"]
+            items.sample
           end
         end
       end
