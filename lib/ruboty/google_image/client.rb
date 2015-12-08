@@ -30,7 +30,7 @@ module Ruboty
       end
 
       def response
-        connection.get(url, params).tap { |e| puts e.inspect }
+        connection.get(url, params)
       end
 
       def url
