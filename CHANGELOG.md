@@ -1,3 +1,6 @@
+## 0.1.1
+* Suppress warning by wrong usage of Faraday gem
+
 ## 0.1.0
 * Use Google Custom Search API instead of Google Image Search API
 
