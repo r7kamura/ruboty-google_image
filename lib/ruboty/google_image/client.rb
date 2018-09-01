@@ -59,8 +59,8 @@ module Ruboty
 
       def connection
         Faraday.new do |connection|
-          connection.adapter :net_http
           connection.response :json
+          connection.adapter :net_http
         end
       end
     end
